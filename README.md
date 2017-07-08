@@ -146,6 +146,14 @@ make clean
 
 make
 
+NOTE: You may get these warning messages.  They are ok.  If you need to, delete the _DATE_ & _TIME_ system variables
+
+rtl8812au/core/rtw_debug.c:50:62: warning: macro "__DATE__" might prevent reproducible builds [-Wdate-time]
+
+	&
+	
+rtl8812au/core/rtw_debug.c:50:62: warning: macro "__TIME__" might prevent reproducible builds
+
 if you installed previously a driver from git hub, you have to erase any previous module 8112au.ko
 
 It is located in: (Note: Use the appropriate version for your kernel)
