@@ -138,7 +138,7 @@ sudo apt-get install build-essential
 sudo apt-get install git
 
 
-git clone -b v5.1.5 https://github.com/embeddednow/rtl8812au.git      
+git clone https://github.com/embeddednow/rtl8812au.git      
 
 cd rtl8812AU
 
