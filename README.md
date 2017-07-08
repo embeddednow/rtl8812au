@@ -53,6 +53,8 @@ https://github.com/Grawp/rtl8812au_rtl8821au/tree/4.3.20  	(From Arch Linux!)
 
 From: rtl8812au/os_dep/linux/usb_intf.c
 
+These are the Vendor & Device IDs that are supported by this driver.  You can add others for the same chip set(s)
+
 8812
 
 	{USB_DEVICE(0x2001, 0x330E), .driver_info = RTL8812}, /* D-Link - ALPHA */
