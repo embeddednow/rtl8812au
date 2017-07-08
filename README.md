@@ -1,5 +1,6 @@
 ﻿Linux 802.11 AC support
-This repo is forked from here: https://github.com/astsam/rtl8812au/tree/v5.1.5
+This repo is forked from here:
+https://github.com/astsam/rtl8812au/tree/v5.1.5
 
 See this article for interesting information on 802.11AC in Linux:
 https://forums.linuxmint.com/viewtopic.php?t=234143
