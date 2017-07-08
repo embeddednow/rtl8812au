@@ -1,4 +1,4 @@
-Linux 802.11 AC support
+﻿Linux 802.11 AC support
 This repo is forked from here: https://github.com/astsam/rtl8812au/tree/v5.1.5
 
 See this article for interesting information on 802.11AC in Linux:
@@ -6,13 +6,13 @@ https://forums.linuxmint.com/viewtopic.php?t=234143
 
 
 Two USB to 802.11AC chipsets for Linux:
-
 Mediatek MT7612U chipset  - Useless drivers for Linux
 or
 Realtek 8812, 8814 chipsets – many github repos with drivers all based on Realtek driver
 The newest Realtek driver 5.15 seems to fix disconnect & other problems.  Use this revision!
 
-The original Realtek driver can be found at: http://down.tendacn.com/uploadfile/2017/Drive/U12_linux_v5.1.5_19247.20160830.rar
+The original Realtek driver can be found at:
+http://down.tendacn.com/uploadfile/2017/Drive/U12_linux_v5.1.5_19247.20160830.rar
 
 But, this cannot be used as is.  For Linux, it has to be integrated into a kernel module.  
 These repos below have that code.
