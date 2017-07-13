@@ -1,60 +1,41 @@
-﻿Linux 802.11 AC support
+# Linux 802.11 AC support
+## Realtek rtl8812au chipset & family
  
-This repo is forked from here:
-
+This repo is forked from here:  
 https://github.com/astsam/rtl8812au/tree/v5.1.5
 
-See this article for interesting information on 802.11AC in Linux:
-
+See this article for interesting information on 802.11AC in Linux:  
 https://forums.linuxmint.com/viewtopic.php?t=234143
 
 
-Two USB to 802.11AC chipsets for Linux:
-
-Mediatek MT7612U chipset  - Useless drivers for Linux
-
-or
-
+### Two USB to 802.11AC chipsets for Linux:
+Mediatek MT7612U chipset  - Useless drivers for Linux  
+-or-  
 Realtek 8812, 8814 chipsets – many github repos with drivers all based on Realtek driver
 
-The newest Realtek driver 5.15 seems to fix disconnect & other problems.  Use this revision!
-
-The original Realtek driver can be found at:
+### Original Driver
+The newest Realtek driver 5.15 seems to fix disconnect & other problems.  Use this revision!  
+The original Realtek driver can be found a
 http://down.tendacn.com/uploadfile/2017/Drive/U12_linux_v5.1.5_19247.20160830.rar
 
 But, this cannot be used as is.  For Linux, it has to be integrated into a kernel module.  
-These repos below have that code.
+Some of these interesting Realtek rtl8812au related repos below have that code:  
 
-Interesting Realtek 8812 related repos
+### Repos
+https://github.com/astsam/rtl8812au/tree/v5.1.5       		***   (5.15 Realtek driver!)  
+https://github.com/0syntral/rtl8812au   				(From Kali Linux!)  
+https://github.com/diederikdehaas/rtl8812AU  
+https://github.com/abperiasamy/rtl8812AU_8821AU_linux 		*  
+https://github.com/ojnickel/rtl8812au  
+https://github.com/ulli-kroll/rtl8821au/  
+https://github.com/mk-fg/rtl8812au     					** (5.15)  
+https://github.com/xxNull-lsk/rtl8812AU    				**      (5.15)  
+https://github.com/zyworkshop/rtl8812au_v5.1.5  			**    (5.15)  
+https://github.com/codeworkx/rtl8812au_asus  
+https://github.com/Grawp/rtl8812au_rtl8821au/tree/4.3.20  	(From Arch Linux!)  
 
-https://github.com/astsam/rtl8812au/tree/v5.1.5       		***   (5.15 Realtek driver!)
-
-https://github.com/0syntral/rtl8812au   				(From Kali Linux!)
-
-https://github.com/diederikdehaas/rtl8812AU
-
-https://github.com/abperiasamy/rtl8812AU_8821AU_linux 		*
-
-https://github.com/ojnickel/rtl8812au
-
-https://github.com/ulli-kroll/rtl8821au/
-
-https://github.com/mk-fg/rtl8812au     					** (5.15)
-
-https://github.com/xxNull-lsk/rtl8812AU    				**      (5.15)
-
-https://github.com/zyworkshop/rtl8812au_v5.1.5  			**    (5.15)
-
-https://github.com/codeworkx/rtl8812au_asus
-
-https://github.com/Grawp/rtl8812au_rtl8821au/tree/4.3.20  	(From Arch Linux!)
-
- 
-
-From: rtl8812au/os_dep/linux/usb_intf.c
-
-These are the Vendor & Device IDs that are supported by this driver.  You can add others for the same chip set(s)
-
+Supported Commercial Devices (rom: rtl8812au/os_dep/linux/usb_intf.c):  
+These are the Vendor & Device IDs that are supported by this driver.  You can add others for the same chip set(
 8812
 
 	{USB_DEVICE(0x2001, 0x330E), .driver_info = RTL8812}, /* D-Link - ALPHA */
