@@ -1,5 +1,4 @@
-# Linux 802.11 AC support
-## Realtek rtl8812au chipset & family
+# Linux 802.11 AC support - Realtek rtl8812au chipset & family
  
 This repo is forked from here:  
 https://github.com/astsam/rtl8812au/tree/v5.1.5
