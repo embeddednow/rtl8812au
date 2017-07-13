@@ -59,7 +59,7 @@ These are the Vendor & Device IDs that are supported by this driver.  You can ad
 	{USB_DEVICE(0x20f4, 0x805b), .driver_info = RTL8812}, /* TRENDnet - */  
 	{USB_DEVICE(0x0411, 0x025d), .driver_info = RTL8812}, /* Buffalo - WI-U3-866D */  
 	{USB_DEVICE(0x050D, 0x1109), .driver_info = RTL8812}, /* Belkin F9L1109 - SerComm */  
-### 8814 
+### 8814
 {USB_DEVICE(0x2001, 0x331a), .driver_info = RTL8814A}, /* D-Link - D-Link */  
 {USB_DEVICE(0x0b05, 0x1817), .driver_info = RTL8814A}, /* ASUS - ASUSTeK */  
 {USB_DEVICE(0x056E, 0x400B), .driver_info = RTL8814A}, /* ELECOM - ELECOM */  
@@ -71,52 +71,42 @@ These are the Vendor & Device IDs that are supported by this driver.  You can ad
 
 ### make
 To make this driver:  
+```
 cd ~  
 mkdir 80211AC  
 cd 80211AC  
-
+```
+```
 sudo apt-get update  
 sudo apt-get upgrade  
 sudo apt-get install linux-headers-generic  
 sudo apt-get install build-essential  
 sudo apt-get install git  
-
+```
+```
 git clone https://github.com/embeddednow/rtl8812au.git  
 cd rtl8812AU  
 make clean  
 make  
+```
+### Warnings & Errors
+NOTE: You may get these warning messages:  They are ok.  If you need to, delete the _DATE_ & _TIME_ system variables  
+`rtl8812au/core/rtw_debug.c:50:62: warning: macro "__DATE__" might prevent reproducible builds [-Wdate-time]`
+-and-  
+`rtl8812au/core/rtw_debug.c:50:62: warning: macro "__TIME__" might prevent reproducible builds`
 
-NOTE: You may get these warning messages.  They are ok.  If you need to, delete the _DATE_ & _TIME_ system variables
+### Removing old drivers
+if you installed previously a driver from git hub, you have to erase any previous module 8112au.ko  
+It is located in: (Note: Use the appropriate version for your kernel)  
+`/lib/modules/4.4.0-83-generic/kernel/drivers/net/wireless/`
 
-rtl8812au/core/rtw_debug.c:50:62: warning: macro "__DATE__" might prevent reproducible builds [-Wdate-time]
+If you have a module for rtl812au there, erase it  
+(Again Note: Use the appropriate version for your kernel)  
+`sudo rm -r /lib/modules/4.4.0-83-generic/kernel/drivers/net/wireless/8812au.ko`
 
-	&
-	
-rtl8812au/core/rtw_debug.c:50:62: warning: macro "__TIME__" might prevent reproducible builds
+and unload the module in case it is active  
+`sudo modprobe -r 8812au.ko`
 
-if you installed previously a driver from git hub, you have to erase any previous module 8112au.ko
-
-It is located in: (Note: Use the appropriate version for your kernel)
-
-/lib/modules/4.4.0-83-generic/kernel/drivers/net/wireless/
-
-If you have a module for rtl812au there, erase it 
-
-(Again Note: Use the appropriate version for your kernel)
-
-sudo rm -r /lib/modules/4.4.0-83-generic/kernel/drivers/net/wireless/8812au.ko
-
-
-and unload the module in case it is active 
-
-sudo modprobe -r 8812au.ko
-
-
-Finally! - Install the driver module
-
-
-sudo make install
-
- sudo modprobe 8812au
-
-
+Finally! - Install the driver module  
+`sudo make install`
+`sudo modprobe 8812au`
