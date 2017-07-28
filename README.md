@@ -123,7 +123,8 @@ To use dkms uninstall and remove:
 `sudo dkms remove -m rtl8812au -v 5.2.9 --all  
 
 ### NetworkManager configuration  
-Add this stanza to /etc/NetworkManager/NetworkManager.conf  (This prevents a random WiFi MAC address being assigned everytime)
-  
-[device]  
+Add this stanza to /etc/NetworkManager/NetworkManager.conf  
+(This prevents a random WiFi MAC address being assigned everytime)  
+
+`[device]  
 wifi.scan-rand-mac-address=no  
