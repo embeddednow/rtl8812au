@@ -84,6 +84,7 @@ sudo apt-get upgrade
 sudo apt-get install linux-headers-generic  
 sudo apt-get install build-essential  
 sudo apt-get install git  
+sudo apt-get install dkms  
 ```
 ```
 git clone https://github.com/embeddednow/rtl8812au.git  
@@ -112,3 +113,17 @@ and unload the module in case it is active
 ### Finally! - Install the driver module  
 `sudo make install`  
 `sudo modprobe 8812au`  
+
+### To use dkms:  
+(as root, or sudo) copy source folder contents to /usr/src/rtl8812au-5.2.9  
+`sudo dkms add -m rtl8812au -v 5.2.9  
+`sudo dkms build -m rtl8812au -v 5.2.9  
+`sudo dkms install -m rtl8812au -v 5.2.9  
+To use dkms uninstall and remove:  
+`sudo dkms remove -m rtl8812au -v 5.2.9 --all  
+
+### NetworkManager configuration  
+Add this stanza to /etc/NetworkManager/NetworkManager.conf  (This prevents a random WiFi MAC address being assigned everytime)
+  
+`  [device]  
+`  wifi.scan-rand-mac-address=no  
