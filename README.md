@@ -125,5 +125,5 @@ To use dkms uninstall and remove:
 ### NetworkManager configuration  
 Add this stanza to /etc/NetworkManager/NetworkManager.conf  (This prevents a random WiFi MAC address being assigned everytime)
   
-`[device]  
-`wifi.scan-rand-mac-address=no  
+[device]  
+wifi.scan-rand-mac-address=no  
