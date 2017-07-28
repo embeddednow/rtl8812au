@@ -23,6 +23,7 @@ But, this cannot be used as is.  For Linux, it has to be integrated into a kerne
 These interesting Realtek rtl8812au related repos below have that code - note only some have the latest 5.15 driver:  
 
 ### Repos
+https://github.com/gordboy/rtl8812au  **** (5.2.9 Realtek Driver)  
 https://github.com/astsam/rtl8812au/tree/v5.1.5 *** (5.15 Realtek driver!)  
 https://github.com/0syntral/rtl8812au (From Kali Linux!)  
 https://github.com/diederikdehaas/rtl8812AU  
@@ -97,7 +98,7 @@ NOTE: You may get these warning messages:  They are ok.  If you need to, delete 
 `rtl8812au/core/rtw_debug.c:50:62: warning: macro "__TIME__" might prevent reproducible builds`
 
 ### Removing old drivers
-if you installed previously a driver from git hub, you have to erase any previous module 8812au.ko  
+if you have previously installed a driver for the 8812au, you have to erase any previous module rtl8812au.ko or 8812au.ko  
 It is located in: (Note: Use the appropriate version for your kernel)  
 `/lib/modules/4.4.0-83-generic/kernel/drivers/net/wireless/`
 
