@@ -15,9 +15,10 @@ Realtek 8812, 8814 chipsets – many github repos with drivers all based on Real
 So, we will focus on the Realtex 8812 & family  
 
 ### Realtek supplied Driver
-The newest Realtek driver 5.15 seems to fix disconnect & other problems.  Use this revision!  
-The newest Realtek driver can be found at:  
-http://down.tendacn.com/uploadfile/2017/Drive/U12_linux_v5.1.5_19247.20160830.rar
+The Latest and greatest  (FTP site)Realtek driver can be found here:  
+http://www.realtek.com.tw/DOWNLOADS/ExpressFTPSite.aspx?DownTypeID=3&DownID=436&PFid=1&Conn=5  
+Also, maybe here for an older version:  
+http://down.tendacn.com/uploadfile/2017/Drive/U12_linux_v5.1.5_19247.20160830.rar  
 
 But, this cannot be used as is.  For Linux, it has to be integrated into a kernel module.  
 These interesting Realtek rtl8812au related repos below have that code - note only some have the latest 5.15 driver:  
