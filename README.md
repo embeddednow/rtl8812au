@@ -115,7 +115,7 @@ and unload the module in case it is active
 `sudo modprobe 8812au`  
 
 ### To use dkms:  
-This is necessary if you want the OS to automaticall rebuild this driver on a kernel upgrade  
+This is necessary if you want the OS to automatically rebuild this driver after a kernel change or upgrade  
 As root (or sudo) copy source folder contents to /usr/src/rtl8812au-5.2.9  
 `sudo dkms add -m rtl8812au -v 5.2.9`  
 `sudo dkms build -m rtl8812au -v 5.2.9`  
