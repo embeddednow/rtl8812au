@@ -16,6 +16,7 @@ So, we will focus on the Realtex 8812 & family
 
 ### Realtek supplied Driver
 The Latest and greatest  (FTP site)Realtek driver can be found here:  
+Realtek FTP - ftp3.realtek.com.tw, user: RTL8812A pass: J2e8Fg  
 http://www.realtek.com.tw/DOWNLOADS/ExpressFTPSite.aspx?DownTypeID=3&DownID=436&PFid=1&Conn=5  
 Also, maybe here for an older version:  
 http://down.tendacn.com/uploadfile/2017/Drive/U12_linux_v5.1.5_19247.20160830.rar  
