@@ -1,5 +1,10 @@
 # Linux 802.11 AC support
 ## *Realtek rtl8812au chipset & family*
+
+## TO DO...
+1) Grab, build and test the driver in the repo from: https://github.com/gordboy/rtl8812au  
+2) If it works well, overwrite or create a new branch here for thie repo's contents - using my readme.md file (updated)  
+3) Deploy & test widely  
  
 This repo is forked from here:  
 https://github.com/astsam/rtl8812au/tree/v5.1.5
