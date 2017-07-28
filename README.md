@@ -111,4 +111,3 @@ and unload the module in case it is active
 ### Finally! - Install the driver module  
 `sudo make install`  
 `sudo modprobe 8812au`  
-`sudo depmod -a`  
