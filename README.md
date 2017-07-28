@@ -97,7 +97,7 @@ NOTE: You may get these warning messages:  They are ok.  If you need to, delete 
 `rtl8812au/core/rtw_debug.c:50:62: warning: macro "__TIME__" might prevent reproducible builds`
 
 ### Removing old drivers
-if you installed previously a driver from git hub, you have to erase any previous module 8112au.ko  
+if you installed previously a driver from git hub, you have to erase any previous module 8812au.ko  
 It is located in: (Note: Use the appropriate version for your kernel)  
 `/lib/modules/4.4.0-83-generic/kernel/drivers/net/wireless/`
 
