@@ -142,7 +142,7 @@ Add this stanza to /etc/NetworkManager/NetworkManager.conf
 `[device]`  
 `wifi.scan-rand-mac-address=no`  
 
-### If the wifi network won;t come back after a soft reboot or resume, do the following...  
+### If the wifi network won't come back after a soft reboot or resume, do the following...  
 `sudo lshw -class network`  
 -or-  
 `iwconfig`  
