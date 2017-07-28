@@ -135,9 +135,28 @@ As root (or sudo) copy source folder contents to /usr/src/rtl8812au-5.2.9
 To use dkms uninstall and remove...  
 `sudo dkms remove -m rtl8812au -v 5.2.9 --all`  
 
-### NetworkManager configuration  
+### NetworkManager and other configuration  
 Add this stanza to /etc/NetworkManager/NetworkManager.conf  
 (This prevents a random WiFi MAC address being assigned everytime)  
 
 `[device]`  
 `wifi.scan-rand-mac-address=no`  
+
+### If the wifi network won;t come back after a soft reboot or resume, do the following...  
+`sudo lshw -class network`  
+-or-  
+`iwconfig`  
+
+You will find a logical name for the wireless network.  
+Mine is wlx74da38c01319.  
+Remember (yeah right!) or copy this name.  
+BTW - You will also see in dmesg or the system logs where wlan0 was renamed to this logical name at some point.  
+
+Anyway, edit the following file (or create it if it doesn’t exist):  
+
+`sudo vi /etc/pm/config.d/config`  
+
+put this line in the file:  
+
+`SUSPEND_MODULES=“8812au wlx74da38c01319”`  
+
