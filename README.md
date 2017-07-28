@@ -1,10 +1,5 @@
 # Linux 802.11 AC support
 ## *Realtek rtl8812au chipset & family*
-
-## TO DO...
-1) Grab, build and test the driver in the repo from: https://github.com/gordboy/rtl8812au  
-2) If it works well, overwrite or create a new branch here for thie repo's contents - using my readme.md file (updated)  
-3) Deploy & test widely  
  
 This repo is forked from here:  
 https://github.com/astsam/rtl8812au/tree/v5.1.5
@@ -130,15 +125,6 @@ and unload the module in case it is active
 ### Finally! - Install the driver module  
 `sudo make install`  
 `sudo modprobe 8812au`  
-
-### To use dkms:  
-This is necessary if you want the OS to automatically rebuild this driver after a kernel change or upgrade  
-As root (or sudo) copy source folder contents to /usr/src/rtl8812au-5.2.9  
-`sudo dkms add -m rtl8812au -v 5.2.9`  
-`sudo dkms build -m rtl8812au -v 5.2.9`  
-`sudo dkms install -m rtl8812au -v 5.2.9`  
-To use dkms uninstall and remove...  
-`sudo dkms remove -m rtl8812au -v 5.2.9 --all`  
 
 ### NetworkManager and other configuration  
 Add this stanza to /etc/NetworkManager/NetworkManager.conf  
