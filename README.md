@@ -119,7 +119,7 @@ and unload the module in case it is active
 sudo dkms add -m rtl8812au -v 5.2.9  
 sudo dkms build -m rtl8812au -v 5.2.9  
 sudo dkms install -m rtl8812au -v 5.2.9
-To use dkms uninstall and remove:  
+To use dkms uninstall and remove  
 sudo dkms remove -m rtl8812au -v 5.2.9 --all  
 
 ### NetworkManager configuration  
